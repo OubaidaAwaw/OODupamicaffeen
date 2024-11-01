@@ -1,0 +1,324 @@
+:root{
+    --PColor:#45B09E;
+    --FColor:#FFB900;
+    --WColor:#FAFAFA;
+    --EColor:#E0E0E0;
+}
+.ContainAllArticles{
+    background-color: var(--WColor);
+    min-height: 100vh;
+}
+.ContainAllArticles .FooterAndContactWithUs{
+    position: relative;
+}
+.SimplyWhoWeAre{
+    background-color: var(--FColor);
+    min-height: 100vh;
+    justify-content: normal;
+    padding-top: 70px;
+}
+.ContainAllElseContact{
+    width: 100%;
+    background-color: var(--FColor);
+    overflow: visible;
+    padding: 0;
+}
+.SimplyWhoWeAre::before,
+.SimplyWhoWeAre::after{
+    display:none ;
+}
+.SimplyWhoWeAre .ContainContactGroup{
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 70px 10px 0;
+}
+.SimplyWhoWeAre .ContainContactGroup h2{
+    color: black;
+    font-size: 32px;
+}
+.ContainAllArticles .SimplyWhoWeAre .ContainSimpleAndJop{
+    width: 700px;
+}
+.ContainAllArticles .SimplyWhoWeAre .ContainSimple .GroupName{
+    margin:0 -40px 10px 0;
+    position: relative;
+}
+.ContainAllArticles .SimplyWhoWeAre .ContainSimple .GroupName label{
+    text-decoration: underline;
+}
+.ContainAllArticles .SimplyWhoWeAre .ContainSimple .GroupName::before{
+    position: absolute;
+    content: "";
+    background-color: var(--PColor);
+    right: -20px;
+    top:010px;
+    width: 10px;
+    height: 60px;
+    border-radius: 5px;
+}
+.ContainAllArticles .ContainRegesterAndLogin{
+    min-height: 100vh;
+    background-color: var(--WColor);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.ContainAllArticles .ContainRegesterAndLogin .TopicLog{
+    margin-top: 60px;
+    margin-bottom: 0;
+}
+.ContainAllArticles .ContainAllUs .TopicLog::before{
+    right: 20px;
+    width: 150px;
+}
+.ContainAllArticles .ContainAllUs .TopicLog{
+    padding-right: 80px;
+}
+.ContainRegesterAndLogin .ContainRegester{
+    position: relative;
+    width: 80%;
+    min-height: 80vh;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.ContainRegesterAndLogin .ContainRegester::before{
+    position: absolute;
+    content: "";
+    z-index: 2;
+    top: 0;
+    right: 50%;
+    height: 100%;
+    width: 2px;
+    background-color: var(--PColor);
+}
+.ContainRegesterAndLogin .ContainRegester .Container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--WColor);
+}
+.ContainRegesterAndLogin .ContainRegester .ContainRegisterinForm{
+    z-index: 1;
+}
+.ContainRegesterAndLogin .ContainRegester .ContainRegisterinForm .BtnLogin,
+.ContainRegesterAndLogin .ContainRegester .ContainLoginForm .BtnRegister{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+.ContainRegesterAndLogin .ContainRegester .ContainRegisterinForm .BtnLogin,
+.ContainRegesterAndLogin .ContainRegester .ContainLoginForm .BtnRegister{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ContainRegesterAndLogin .ContainRegester .ContainRegisterinForm .BtnLogin a,
+.ContainRegesterAndLogin .ContainRegester .ContainLoginForm .BtnRegister a{
+    background-color: var(--EColor);
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.5 );
+    padding: 7px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 28px;
+    font-weight: 900;
+    font-family: sans-serif;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    z-index: 0;
+}
+.ContainRegesterAndLogin .ContainRegester .ContainRegisterinForm .BtnLogin a:hover::before,
+.ContainRegesterAndLogin .ContainRegester .ContainLoginForm .BtnRegister a:hover::before{
+    right: -50px;
+}
+.ContainRegesterAndLogin .ContainRegester .ContainRegisterinForm .BtnLogin a::before,
+.ContainRegesterAndLogin .ContainRegester .ContainLoginForm .BtnRegister a::before{
+    position: absolute;
+    content: "";
+    bottom: -20px;
+    right:100%;
+    width: 200%;
+    height: 100%;
+    background-color:var(--FColor);
+    rotate: 15deg;
+    transition: 0.2s;
+    z-index: -1;
+}
+.ContainRegesterAndLogin .ContainRegester .ContainLoginForm .BtnRegister a::before{
+    background-color: var(--PColor);
+}
+.ContainRegesterAndLogin .ContainRegester .ContainRegisterinForm .BtnLogin p,
+.ContainRegesterAndLogin .ContainRegester .ContainLoginForm .BtnRegister p{
+    font-size: 20px;
+    font-weight: 700;
+    cursor: default;
+    color: black;
+}
+.ContainRegesterAndLogin .ContainRegester .ContainRegisterinForm .ContainFormsReg,
+.ContainRegesterAndLogin .ContainRegester .ContainLoginForm .ContainFormsLog{
+    position: absolute;
+    width: 50%;
+    min-height: 100%;
+    padding: 20px;
+}
+.ContainRegesterAndLogin .ContainRegester .ContainRegisterinForm .ContainFormsReg h1:first-child
+.ContainRegesterAndLogin .ContainRegester .ContainLoginForm .ContainFormsLog h1:first-child{
+    margin-right: 20px;
+}
+.ContainRegesterAndLogin .ContainRegester .ContainLoginForm{
+    z-index: 0;
+}
+.ContainRegesterAndLogin .ContainRegester{
+    border-color: var(--FColor);
+}
+.ContainRegesterAndLogin .SettingColorReg{
+    border-color: var(--PColor);
+}
+.ContainRegesterAndLogin .ContainRegester::before{
+    background-color: var(--FColor);
+}
+.ContainRegesterAndLogin .SettingColorReg::before{
+    background-color: var(--PColor);
+}
+.ContainRegesterAndLogin .ContainRegester .ContainLoginForm input{
+    border-color: var(--FColor);
+}
+.ContainRegesterAndLogin .ContainRegester .ContainLoginForm .ContainPassWord i,
+.ContainRegesterAndLogin .ContainRegester .ContainLoginForm .ContainPassWord input{
+    color: var(--FColor);
+}
+.ContainRegesterAndLogin .ContainRegester .ContainLoginForm .ContainButton button{
+    background-color: var(--FColor);
+    border-color: var(--FColor);
+}
+.FooterAndContactWithUs .ContainContactLogoLoginCard .ContainContact .Container::before{
+    right: -75px;
+}
+.Position{z-index: 1 !important; transition-delay: 0.5s; transition: 0.5s;}
+.Right{right: 0; transition-delay: 0.5s; transition: 0.5s;}
+.Left{left: 0; transition-delay: 0.5s; transition: 0.5s;}
+.PositionNot{z-index:0 !important; transition: 0.5s;}
+.RightNot{right: -50%; transition: 0.5s;}
+.LeftNot{left: -50%;  transition: 0.5s;}
+/* ALL Persons */
+.ContainAllArticles .ContainAllUs{
+    min-height: 100vh;
+    padding: 90px 0  60px 0;
+    display: flex;
+    flex-direction: column;
+}
+.ContainAllArticles .ContainAllUs .ContainCards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.ContainAllArticles .ContainAllUs .CardPerson{
+    width: 400px;
+    height: 525px;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border: solid 1px var(--EColor);
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.5);    /* background-color: rgb(32 34 45); */
+    background-color: var(--PColor);
+}
+.ContainAllArticles .ContainAllUs .CardPerson .ContainImgAndName{
+    padding: 20px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ContainAllArticles .ContainAllUs .CardPerson .ContainImgAndName .ImagePerson{
+    width: 250px;
+    height: 250px;
+    margin-top: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+.ContainAllArticles .ContainAllUs .CardPerson:hover .ContainImgAndName .ImagePerson{
+    margin-top: 40px;
+    transition: 0.5s;
+}
+.ContainAllArticles .ContainAllUs .CardPerson .ContainImgAndName .ImagePerson img{
+    width: 100%;
+    height: 100%;
+}
+.ContainAllArticles .ContainAllUs .CardPerson .ContainImgAndName .NamePerson{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--WColor);
+    font-family: sans-serif;
+    text-transform: uppercase;
+    cursor: default;
+    letter-spacing: 3px;
+}
+.ContainAllArticles .ContainAllUs .CardPerson .ContainJopPersonContact{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.ContainAllArticles .ContainAllUs .CardPerson .ContainJopPersonContact .JopPerson{
+    padding: 20px;
+    padding-top: 0;
+    font-size: 24px;
+    font-family: sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: default;
+    margin-top: 50px;
+    transition: 0.5s;
+    opacity: 0;
+}
+.ContainAllArticles .ContainAllUs .CardPerson:hover .ContainJopPersonContact .JopPerson{
+    margin-top: 0;
+    transition: 0.2s;
+    opacity: 1;
+    transition-delay: var(--TimeDelay);
+}
+.ContainAllArticles .ContainAllUs .CardPerson .ContainJopPersonContact .ContactPerson{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+.ContainAllArticles .ContainAllUs .CardPerson .ContainJopPersonContact .ContactPerson a{
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--WColor);
+    margin-top: 50px;
+    opacity: 0;
+    transition: 0.2s;
+}
+.ContainAllArticles .ContainAllUs .CardPerson .ContainJopPersonContact .ContactPerson a:hover{
+    margin-bottom: 40px;
+}
+.ContainAllArticles .ContainAllUs .CardPerson:hover .ContainJopPersonContact .ContactPerson a{
+    margin-top: 0;
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: var(--TimeDelay);
+}

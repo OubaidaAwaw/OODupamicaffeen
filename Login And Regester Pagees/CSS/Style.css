@@ -1,0 +1,254 @@
+/* Start Global Property */
+:root{
+    --PColor:#45B09E;
+    --FColor:#FFB900;
+    --WColor:#FAFAFA;
+    --EColor:#E0E0E0;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+::selection{
+    background-color: rgba(0, 0, 0, 0.3);
+    color:var(--WColor);
+}
+::-webkit-scrollbar{
+    background-color: var(--EColor);
+    width: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--FColor);
+}
+.body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--WColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    font-size: 24px;
+}
+input{
+    width: 150px;
+    outline: none;
+    border: none;
+    padding: 5px 7px;
+    border-radius: 7px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 5px;
+    border: solid 2px var(--PColor); 
+    background-color: var(--WColor);
+    color: var(--PColor);
+}
+.Done{
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    top: 0 ;
+    right: 0;
+    font-family: sans-serif;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    transition: 0.5s;
+    justify-content: center;
+    cursor: default;
+    transform: scale(0);
+}
+.Done .TopicDone{
+    font-size: 50px;
+    color: green;
+}
+.DoneDone{
+    transform: scale(1) !important;
+}
+.Done i{
+    margin: 60px 0;
+    font-size: 200px;
+    color: green;
+}
+.Done .BackHome{
+    background-color: green;
+    text-decoration: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 26px;
+    color: white;
+}
+/* End Global Property */
+/* Start ContainRegester */
+.ContainRegester{
+    position: relative;
+    margin: 60px 0;
+    width: 400px;
+    min-height: 600px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    border: solid 3px var(--PColor); 
+}
+.ContainRegester h1{
+    cursor: default;
+}
+.ContainRegester .ContainFullName,
+.ContainRegester .ContainEmail,
+.ContainRegester .ContainPassWord,
+.ContainRegester .ContainButton{
+    width: 100%;
+    padding:10px;
+}
+.ContainRegester .ContainFullName{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.ContainRegester .Inputs{
+    position: relative;
+    height: 80px;
+    width: 50% ;
+    margin: 5px;
+}
+.ContainRegester .Inputs input{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.7;
+}
+.ContainRegester .Inputs p{
+    position: absolute;
+    z-index: 1;
+    background-color: var(--WColor);
+    top: 24px;
+    right: 10px;
+    padding: 0 5px;
+    font-size: 18px;
+    transition: 0.3s;
+    cursor: default;
+}
+.ContainRegester .Inputs:hover input,
+.ContainRegester .Inputs:hover i,
+.ContainRegester .ContainButton button:hover{
+    opacity: 1;
+}
+.ContainRegester .Inputs:hover p{
+    right: 0;
+    top: 0;
+    font-size: 24px;
+    color: black;
+}
+.ContainRegester .ContainEmail .Inputs,
+.ContainRegester .ContainPassWord .Inputs{
+    width:calc(100% - 10px);
+}
+.ContainRegester .ContainEmail .Inputs input{
+    direction: ltr;
+}
+.ContainRegester .ContainPassWord i{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color:var(--PColor);
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+.ContainRegester .ContainPassWord .Inputs .BtnEye{
+    opacity: 1;
+    z-index: 1;
+}
+.BtnEyeShow{
+    opacity: 0 !important;
+}
+.ContainRegester .ContainPassWord .Inputs input{
+    padding-left:40px;
+}
+.ContainRegester .ContainButton{
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.ContainRegester .ContainButton button{
+    width:calc(100% - 11px);
+    height: 40.8px;
+    padding: 1px;
+    background: none;
+    border: solid var(--PColor) 2px;
+    outline: none;
+    color: var(--PColor);
+    font-size: 26px;
+    font-family: sans-serif;
+    cursor: pointer;
+    border-radius: 7px;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+.ContainRegester .ContainButton button:first-child{
+    background-color: #45B09E;
+    color: var(--WColor);
+}
+.ContainRegester .ContainButton button:last-child{
+    font-weight: 800;
+}
+.ContainRegester .LinkToLogin a{
+    margin-right: 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-decoration: none;
+    outline: none;
+    color: blue;
+}
+.ContainRegester .LinkToLogin a:hover{
+    text-decoration: underline;
+}
+.ContainRegester .ErrorInputs,
+.ContainRegester .ErrorInputs p{
+    margin: 20px 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    color: red;
+    cursor: default;
+}
+.ContainRegester .ErrorInputs{
+    display: flex;
+    flex-direction: row;
+}
+.ContainRegester .ErrorInputs i{
+    margin: 24px 5px;
+}
+.ContainRegester .BackBtn{
+    color: var(--PColor);
+    font-size: 40px;
+    cursor: pointer;
+    width: 40px;
+}
+.ContainRegester .BackBtn:hover{
+    animation: infinite ArrowShow 1s ease-in-out;
+}
+@keyframes ArrowShow{
+    50%{
+        margin-right: 10px;
+    }
+    100%{margin: 0;}
+}
+.Hide{
+    display: none !important;
+}
+/* End ContainRegester */

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <title>Home</title>
+</head>
+<body>
+    <!-- Start Header -->
+    <div class="NavBar">
+        <div class="ContainLogoAndMenuAndSearch">
+            <div class="Menu"><span></span><span></span><span></span></div>
+            <div class="Logo"><img src="IMAGES/Image (9).jpg" alt="Logo"></div>
+            <div class="Search"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+        <div class="ContainLinks">
+            <ul type="none">
+                <li>
+                    <i class="fa-solid fa-house"></i>
+                    <a href="Home.html" class="Link Active"><span></span>الصفحة الرئيسية</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-sheet-plastic"></i>
+                    <a href="Subjects.html" class="Link">مواضيعنا<span></span></a>
+                </li>
+                <!-- <li>
+                    <i class="fa-solid fa-ellipsis"></i>
+                    <a href="#" class="Link">أخرى<span></span></a>
+                </li> -->
+                <li>
+                    <i class="fa-solid fa-users"></i>
+                    <a href="AboutUs.html" class="Link">من نحن<span></span></a>
+                </li>
+            </ul>
+        </div>
+        <div  class="ContainLogAndReg">
+            <div class="ContainUserAndSignOut" >
+                <div class="ContainSignOut">
+                    <a id="SignOutClicked" href="Home.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    <p>Sign Out</p>
+                    <p id="NameUser"></p>
+                </div>
+                <div class="ContainIconUser"><i class="fa-solid fa-circle-user"></i></div>
+            </div>
+        </div>
+        <div id="allall" class="ContainLogAndReg">
+            <div class="Reg"><a href="Login And Regester Pagees/Regester.html">انشاء حساب <i class="fa-solid fa-user-plus"></i></a></div>
+            <div class="Log"><a href="Login And Regester Pagees/Login.html">تسجيل الدخول <i class="fa-solid fa-right-to-bracket"></i></a></div>
+        </div>
+    </div>
+    <!-- End Header -->
+    <!-- Start Extentions For Header -->
+    <div class="ContainSearch">
+        <div class="SearchBox">
+            <div class="InputAndActionSearching">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" class="SearchInput" placeholder="ابحث...">
+            </div>
+            <div class="FilterSearching">
+                <i class="fa-solid fa-sliders"></i>
+            </div>
+            <div class="CloseAll"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+        <div class="ContainFilters">
+            <div class="Filters">
+                <div class="Filter">
+                    <h1 class="TopicFitler">تاريخ التحميل</h1>
+                    <div class="InputsFilters">
+                        <input type="radio" name="DateVedios" checked value="All">
+                        <label for="All">الجميع</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="DateVedios" value="LastHour">
+                        <label for="LastHour">آخر ساعة</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="DateVedios" value="Today">
+                        <label for="Today">آخر يوم</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="DateVedios" value="ThisWeek">
+                        <label for="ThisWeek">آخر اسبوع</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="DateVedios" value="ThisMounth">
+                        <label for="ThisMounth">آخر شهر</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="DateVedios" value="ThisYear">
+                        <label for="ThisYear">آخر سنة</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="DateVedios" value="Oldest">
+                        <label for="Oldest">الأقدم</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="DateVedios" value="Newest">
+                        <label for="Newest">الأحدث</label>
+                    </div>
+                </div>
+                <div class="Filter">
+                    <h1 class="TopicFitler">المدة</h1>
+                    <div class="InputsFilters">
+                        <input type="radio" name="LongTime"  checked value="All">
+                        <label for="All">الجميع</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="LongTime" value="Top4Min">
+                        <label for="Top4Min">اكثر من 4 دقائق</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="LongTime" value="between4And20Min">
+                        <label for="between4And20Min">بين ال 4 دقائق وال 20دقيقة</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="LongTime" value="Top20Min">
+                        <label for="Top20Min">أكثر من 20 دقيقة</label>
+                    </div>
+                </div>
+                <div class="Filter">
+                    <h1 class="TopicFitler">المحتوى</h1>
+                    <div class="InputsFilters">
+                        <input type="radio" name="Contains" checked value="All">
+                        <label for="All">الجميع</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="Contains" value="Elmy">
+                        <label for="Elmy">المحتوى العلمي</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="Contains" value="Nafsi">
+                        <label for="Nafsi">المحتوى النفسي</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="Contains" value="Tarikh">
+                        <label for="Tarikh">المحتوى التاريخي</label>
+                    </div>
+                </div>
+                <div class="Filter">
+                    <h1 class="TopicFitler">الترتيب حسب</h1>
+                    <div class="InputsFilters">
+                        <input type="radio" name="Arrangments" checked value="All">
+                        <label for="All">الجميع</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="Arrangments" value="Access">
+                        <label for="Access">مدى الصلة</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="Arrangments" value="NewFirst">
+                        <label for="NewFirst">الأحدث قبل</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="Arrangments" value="OldFirst">
+                        <label for="OldFirst">الأقدم قبل</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="Arrangments" value="Views">
+                        <label for="Views">عدد المشاهدات</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="Arrangments" value="Likes">
+                        <label for="Likes">التقييم</label>
+                    </div>
+                    <div class="InputsFilters">
+                        <input type="radio" name="Arrangments" value="Actions">
+                        <label for="Actions">التفاعل</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="GoTopAllPages"><a href="#" onclick="window.screenY = 0;"><i class="fa-solid fa-arrow-right"></i></a></div>
+    <!-- End Extentions For Header -->
+    <!-- Start Contain All Articles -->
+    <div class="ContainAllArticles">
+        <div class="WellComeScreen">
+            <img src="IMAGES/Intro.jpg" alt="Introduction Image" class="IntroImage"/>
+            <div class="ContainAllContactIntro">
+                <div class="XMarkIntroContact" title="More Contact"><i class="fa-solid fa-xmark"></i></div>
+                <div class="ContainerContactIntro">
+                    <a href="#" style="--ColorIconLink:#fd1954;"><i class="fa-brands fa-instagram"></i><i class="fa-solid fa-share"></i></a>
+                    <a href="#" style="--ColorIconLink: black;"><i class="fa-brands fa-tiktok"></i><i class="fa-solid fa-share"></i></a>
+                    <a href="#" style="--ColorIconLink: #840707;"><i class="fa-brands fa-youtube"></i><i class="fa-solid fa-share"></i></a>
+                    <a href="#" style="--ColorIconLink:skyblue;"><i class="fa-brands fa-twitter"></i><i class="fa-solid fa-share"></i></a>
+                    <a href="#" style="--ColorIconLink:#0f87ee;"><i class="fa-brands fa-facebook"></i><i class="fa-solid fa-share"></i></a>
+                </div>
+            </div>
+            <div class="ContainTextIntro">
+                <h1>اهلا بكم في موقعنا المتواضع</h1>
+                <h4>مرحبا بكم في افضل الاماكن العلمية العملية في الوطن العربي من شرقه حتى غربه</h4>
+            </div>
+            <div class="ContainYouTubeLink">
+                <div class="RotContYTL">
+                    <a href="#">YouTube Channel</a>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="FooterAndContactWithUs">
+            <div class="ContainContactLogoLoginCard">
+                <div class="ContainContact">
+                    <div class="ContainerFooter">
+                        <a href="#" style="--ColorIconLink:#0f87ee;"><i class="fa-brands fa-facebook"></i> FaceBook <i class="fa-solid fa-share"></i></a>
+                        <a href="#" style="--ColorIconLink:#fd1954;"><i class="fa-brands fa-instagram"></i> Instagram <i class="fa-solid fa-share"></i></a>
+                        <a href="#" style="--ColorIconLink:skyblue ;"><i class="fa-brands fa-twitter"></i> Twitter <i class="fa-solid fa-share"></i></a>
+                        <a href="#" style="--ColorIconLink:black;"><i class="fa-brands fa-tiktok"></i> TikTok <i class="fa-solid fa-share"></i></a>
+                        <a href="#" style="--ColorIconLink:#840707;"><i class="fa-brands fa-youtube"></i> YouTube <i class="fa-solid fa-share"></i></a>
+                    </div>
+                </div>
+                <div class="FooterLogo"><img src="IMAGES/Image (9).jpg" alt=""></div>
+            </div>
+            <a href="#" class="DeveloperContact">Made With Oubaida Awaw</a> 
+        </div>
+        <div class="Other" style="z-index: -1;">Hiddden</div>
+        <div class="Other SuggestionForYou">
+            <h1>آخر الفيديوهات المضافة</h1>
+            <div class="ContainAllCardVedio">
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (14).jpg" alt="Vedio"/>
+                    <h2>عنوان الفيديو</h2>
+                    <div class="ContainDetailsVedio">
+                        <h3>شوية تفاصيل عن الفيديو</h3>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (32).jpg" alt="Vedio"/>
+                    <h2>عنوان الفيديو</h2>
+                    <div class="ContainDetailsVedio">
+                        <h3>شوية تفاصيل عن الفيديو</h3>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (33).jpg" alt="Vedio"/>
+                    <h2>عنوان الفيديو</h2>
+                    <div class="ContainDetailsVedio">
+                        <h3>شوية تفاصيل عن الفيديو</h3>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (24).jpg" alt="Vedio"/>
+                    <h2>عنوان الفيديو</h2>
+                    <div class="ContainDetailsVedio">
+                        <h3>شوية تفاصيل عن الفيديو</h3>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (32).jpg" alt="Vedio"/>
+                    <h2>عنوان الفيديو</h2>
+                    <div class="ContainDetailsVedio">
+                        <h3>شوية تفاصيل عن الفيديو</h3>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (33).jpg" alt="Vedio"/>
+                    <h2>عنوان الفيديو</h2>
+                    <div class="ContainDetailsVedio">
+                        <h3>شوية تفاصيل عن الفيديو</h3>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Other SuggestionForYou">
+            <h1>أكثر الفيديوهات مشاهدة</h1>
+            <div class="ContainAllCardVedio">
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (14).jpg" alt="Vedio"/>
+                    <div class="ContainDetailsVedio2">
+                        <div>
+                            <div class="Label">عنوان الفيديو</div>
+                            <h3>شوية تفاصيل عن الفيديو</h3>
+                        </div>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (32).jpg" alt="Vedio"/>
+                    <div class="ContainDetailsVedio2">
+                        <div>
+                            <div class="Label">عنوان الفيديو</div>
+                            <h3>شوية تفاصيل عن الفيديو</h3>
+                        </div>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (14).jpg" alt="Vedio"/>
+                    <div class="ContainDetailsVedio2">
+                        <div>
+                            <div class="Label">عنوان الفيديو</div>
+                            <h3>شوية تفاصيل عن الفيديو</h3>
+                        </div>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (32).jpg" alt="Vedio"/>
+                    <div class="ContainDetailsVedio2">
+                        <div>
+                            <div class="Label">عنوان الفيديو</div>
+                            <h3>شوية تفاصيل عن الفيديو</h3>
+                        </div>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (33).jpg" alt="Vedio"/>
+                    <div class="ContainDetailsVedio2">
+                        <div>
+                            <div class="Label">عنوان الفيديو</div>
+                            <h3>شوية تفاصيل عن الفيديو</h3>
+                        </div>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (33).jpg" alt="Vedio"/>
+                    <div class="ContainDetailsVedio2">
+                        <div>
+                            <div class="Label">عنوان الفيديو</div>
+                            <h3>شوية تفاصيل عن الفيديو</h3>
+                        </div>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Other SuggestionForYou">
+            <h1>آخر الكتب المضافة</h1>
+            <div class="ContainAllCardVedio">
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (14).jpg" alt="Vedio"/>
+                    <h2>عنوان الفيديو</h2>
+                    <div class="ContainDetailsVedio">
+                        <h3>شوية تفاصيل عن الفيديو</h3>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (32).jpg" alt="Vedio"/>
+                    <h2>عنوان الفيديو</h2>
+                    <div class="ContainDetailsVedio">
+                        <h3>شوية تفاصيل عن الفيديو</h3>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (33).jpg" alt="Vedio"/>
+                    <h2>عنوان الفيديو</h2>
+                    <div class="ContainDetailsVedio">
+                        <h3>شوية تفاصيل عن الفيديو</h3>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (24).jpg" alt="Vedio"/>
+                    <h2>عنوان الفيديو</h2>
+                    <div class="ContainDetailsVedio">
+                        <h3>شوية تفاصيل عن الفيديو</h3>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (32).jpg" alt="Vedio"/>
+                    <h2>عنوان الفيديو</h2>
+                    <div class="ContainDetailsVedio">
+                        <h3>شوية تفاصيل عن الفيديو</h3>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (33).jpg" alt="Vedio"/>
+                    <h2>عنوان الفيديو</h2>
+                    <div class="ContainDetailsVedio">
+                        <h3>شوية تفاصيل عن الفيديو</h3>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Other SuggestionForYou">
+            <h1>أكثر الكتب مشاهدة</h1>
+            <div class="ContainAllCardVedio">
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (14).jpg" alt="Vedio"/>
+                    <div class="ContainDetailsVedio2">
+                        <div>
+                            <div class="Label">عنوان الفيديو</div>
+                            <h3>شوية تفاصيل عن الفيديو</h3>
+                        </div>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (32).jpg" alt="Vedio"/>
+                    <div class="ContainDetailsVedio2">
+                        <div>
+                            <div class="Label">عنوان الفيديو</div>
+                            <h3>شوية تفاصيل عن الفيديو</h3>
+                        </div>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (14).jpg" alt="Vedio"/>
+                    <div class="ContainDetailsVedio2">
+                        <div>
+                            <div class="Label">عنوان الفيديو</div>
+                            <h3>شوية تفاصيل عن الفيديو</h3>
+                        </div>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (32).jpg" alt="Vedio"/>
+                    <div class="ContainDetailsVedio2">
+                        <div>
+                            <div class="Label">عنوان الفيديو</div>
+                            <h3>شوية تفاصيل عن الفيديو</h3>
+                        </div>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (33).jpg" alt="Vedio"/>
+                    <div class="ContainDetailsVedio2">
+                        <div>
+                            <div class="Label">عنوان الفيديو</div>
+                            <h3>شوية تفاصيل عن الفيديو</h3>
+                        </div>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="CardVedio">
+                    <img src="IMAGES/MUSIC (33).jpg" alt="Vedio"/>
+                    <div class="ContainDetailsVedio2">
+                        <div>
+                            <div class="Label">عنوان الفيديو</div>
+                            <h3>شوية تفاصيل عن الفيديو</h3>
+                        </div>
+                        <div class="DetailsShowAndLove">
+                            <div><span>10</span> مشاهدة</div>
+                            <div><span>10</span> <i class="fa-regular fa-heart"></i></div>
+                            <a href="#">مشاهدة الآن <i class="fa-solid fa-check"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Other OurReferenceAndSuggest">
+            <div class="SuggestForUs">
+                <h1>قدم لنا اقتراح محتوى</h1>
+                <div class="ContainAddSuggest">
+                    <form class="FormSuggest" action="#">
+                        <h2>عنوان الفكرة</h2>
+                        <input type="text" id="Topic" name="" required>
+                        <h2>سرد الفكرة</h2>
+                        <textarea name="" class="DesctiptionTopic" required></textarea>
+                        <div class="ContainBtns">
+                            <button type="submit">إرسال <i class="fa-regular fa-envelope"></i></button>
+                            <button type="reset">حذف <i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <div class="ControlWhere"><i class="fa-solid fa-caret-up"></i></div>
+                    </form>
+                </div>
+            </div>
+            <div class="ContainRefrence">
+                <h1>مصادرنا الاساسية</h1>
+                <div class="References">
+                    <img src="IMAGES/Reference.png" alt="Reference">
+                    <img src="IMAGES/Reference.png" alt="Reference">
+                    <img src="IMAGES/Reference.png" alt="Reference">
+                    <img src="IMAGES/Reference.png" alt="Reference">
+                    <img src="IMAGES/Reference.png" alt="Reference">
+                </div>
+            </div>
+        </div>
+        <div class="Other OlwaysQuistionAsked">
+            <div class="ContainQuistions">
+                <h1>اكثر الأسئلة تكرارا</h1>
+                <div class="AllContainQuis">
+                    <div class="Quistions">
+                        <a href="#">كيف استطيع التغلب على الخوف من الظلام</a>
+                        <a href="#">كيف يمكنني تعلم عادة جديدة وجيدة واقصاء العادات الخاطئة عندس</a>
+                        <a href="#">التوقف عن التدخين افضل الكتب</a>
+                        <a href="#">اي وهيك يعني بضل بكتوب اسئلة</a>
+                        <a href="#">لحتى امل من الكتابة او يبطل يطلع براسي اسئلة</a>
+                        <a href="#">كيف استطيع التغلب على الخوف من الظلام</a>
+                        <a href="#">كيف يمكنني تعلم عادة جديدة وجيدة واقصاء العادات الخاطئة عندس</a>
+                        <a href="#">التوقف عن التدخين افضل الكتب</a>
+                        <a href="#">اي وهيك يعني بضل بكتوب اسئلة</a>
+                        <a href="#">لحتى امل من الكتابة او يبطل يطلع براسي اسئلة</a>
+                    </div>
+                    <div class="QuistionImage">
+                        <img src="IMAGES/questions.svg" alt="Quistion Image"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Other SimplyWhoWeAre">
+            <div class="ContainLogo"><img src="IMAGES/Image (9).jpg" alt="Logo"></div>
+            <div class="ContainSimpleAndJop">
+                <div class="ContainSimple">
+                    <h2 class="Simple">نبذة عنا:</h2>
+                    <ul>
+                        <li>نحن فريق مكون من عدة اشخاص</li>
+                        <li>نسهم في تحسين المجتمع العربي</li>
+                        <li>نسعى الى محول الامية التكنولوجية العربية</li>
+                        <li>توعية الناس على الواقع وتحسين عقلياتهم</li>
+                        <li>ويلي بدك ياه نحن منعجبك ماعم اعرف شو اكتب</li>
+                    </ul>
+                </div>
+                <div class="ContainJop">
+                    <h2 class="Jop">مهمتنا:</h2>
+                    <h3 class="ArticleJop">نحن هنا لنساعدك في ايجاد المعلومات الصحيحة من المصادر الصحيحة وشرحها بطريقة يتم فهمها لكافو الاعمار من جميع الفئات</h3>
+                    <h2 class="Contact">يكمنك التواصل معنا عن طريق:</h2>
+                    <div class="ContainBtnsContact">
+                        <a href="#"><i class="fa-brands fa-facebook"></i><i class="fa-solid fa-share"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i><i class="fa-solid fa-share"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Other" style="z-index: -1;">Hidden</div>
+    </div>
+    <!-- End Contain All Articles -->
+    <!-- Start Login And Regester -->
+    <script src="JAVASCRIPT/JavaScript.js"></script>
+</body>
+</html>
+<!-- 
+    <i class="fa-solid fa-plus"></i>
+    <i class="fa-solid fa-angle-right"></i>
+    <i class="fa-solid fa-wrench"></i>
+    <i class="fa-solid fa-circle-check"></i>
+    <i class="fa-solid fa-eye-slash"></i>
+    <i class="fa-solid fa-eye"></i>
+    <i class="fa-solid fa-xmark"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-square-instagram"></i>
+    <i class="fa-brands fa-facebook-f"></i>
+    <i class="fa-brands fa-facebook-messenger"></i>
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-tiktok"></i>
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-square-twitter"></i>
+    <i class="fa-solid fa-right-to-bracket"></i>
+    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+    <i class="fa-solid fa-circle-xmark"></i>
+    <i class="fa-regular fa-circle-xmark"></i>
+    <i class="fa-solid fa-arrow-right"></i>
+    <i class="fa-brands fa-github"></i>
+    <i class="fa-solid fa-envelope-circle-check"></i>
+    <i class="fa-solid fa-envelope"></i>
+    <i class="fa-regular fa-envelope"></i>
+    <i class="fa-solid fa-reply"></i>
+    <i class="fa-solid fa-share"></i>
+    <i class="fa-brands fa-google"></i>
+    <i class="fa-brands fa-wikipedia-w"></i>
+    <i class="fa-solid fa-triangle-exclamation"></i>
+    <i class="fa-solid fa-caret-up"></i>
+    <i class="fa-solid fa-circle-user"></i>
+-->

@@ -1,0 +1,1241 @@
+/* Global */
+:root{
+    --PColor:#45B09E;
+    --FColor:#FFB900;
+    --WColor:#FAFAFA;
+    --EColor:#E0E0E0;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+::selection{
+    background-color: rgba(0, 0, 0, 0.3);
+    color:var(--WColor);
+}
+::-webkit-scrollbar{
+    background-color: var(--EColor);
+    width: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--FColor);
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    background-color: #FFFFFF;
+}
+.fa-solid ,.fa-regular{
+    cursor: pointer;
+}
+h1{
+    cursor: default;
+}
+/* Start Navigation Bar */
+.NavBar{
+    z-index: 100;
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--WColor);
+    border-bottom: var(--EColor) 2px solid;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.549);
+    opacity: 0.8;
+}
+.ContainLogoAndMenuAndSearch{
+    width:200px ;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+.Menu{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    display: none;
+}
+.Menu span{
+    width: 50px;
+    height: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color:var(--FColor);
+    transition: 0.3s;
+}
+.Menu span:nth-child(1){
+    transform: translateY(25px);
+}
+.Menu span:nth-child(3){
+    transform: translateY(-25px);
+}
+.EXMenu span:nth-child(2){
+    transform: translateX(20px);
+    opacity: 0;
+    color: purple;
+}
+.EXMenu span:nth-child(3){
+    transform: translateY(-10px) rotate(-45deg);
+}
+.EXMenu span:nth-child(1){
+    transform: translateY(10px) rotate(45deg);
+}
+.Logo{
+    width: 50px;
+    height: 50px;
+}
+.Logo img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.Search{
+    width: 40px;
+    height: 40px;
+    background-color: var(--WColor);
+    color: var(--FColor);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.Search:hover{
+    background-color: var(--FColor);
+    color: var(--WColor);
+}
+.ContainLinks{
+    height: 100%;
+    width: 100%;
+}
+.ContainLinks ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.ContainLinks ul li{
+    color: var(--PColor);
+    cursor: pointer;
+    position: relative;
+}
+.ContainLinks ul li .Link{
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--PColor);
+    cursor: pointer;
+    padding: 3px 10px 3px;
+}
+.ContainLinks ul li .Active,
+.ContainLinks ul li:hover a{
+    border-bottom: 3px solid var(--PColor);
+}
+.ContainLogAndReg .ContainUserAndSignOut{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    z-index: 1;
+}
+.ContainLogAndReg .ContainUserAndSignOut .ContainIconUser i{
+    font-size: 40px;
+    color: var(--FColor);
+    cursor: pointer;
+}
+.ContainLogAndReg .ContainUserAndSignOut .ContainSignOut{
+    position: absolute;
+    right: -60px;
+    top: 150%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px 10px;
+    color: var(--EColor);
+    transition: right 0.5s, opacity 0.5s ,visibility 0.5s;
+    transition-delay: 0 , 0 , 0.5s;
+}
+.ContainLogAndReg .ContainUserAndSignOutShow .ContainSignOut{ 
+    visibility: visible;
+    right: -150px;
+    opacity: 1;
+    transition: 0.5s;
+}
+.ContainLogAndReg .ContainUserAndSignOut .ContainSignOut p{
+    font-size: 16px;
+    font-weight: 900;
+    cursor: default;
+}
+.ContainLogAndReg .ContainUserAndSignOut .ContainSignOut p:last-child{
+    font-size: 14px;
+}
+.ContainLogAndReg .ContainUserAndSignOut .ContainSignOut i{
+    font-size: 25px;
+    color: var(--EColor);
+}
+.ContainLogAndReg{
+    margin-left: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+.NavBar .ContainLogAndReg .ContainUserAndSignOut{
+    display: none !important;
+    margin-top: 10px;
+}
+.NavBar .ContainLogAndReg .showit{
+    display: block !important;
+}
+#allall{
+    display: inherit;
+}
+.Hidden{
+    display: none !important;
+}
+.ContainLogAndReg .Reg,
+.ContainLogAndReg .Log{
+    width: 160px;
+    height: 45px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    justify-content: center;
+}
+.ContainLogAndReg .Reg a,
+.ContainLogAndReg .Log a{
+    color: var(--WColor);
+    background-color:var(--FColor);
+    font-size: 22px;
+    font-weight: 500;
+    padding: 7px 12px 7px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.ContainLogAndReg .Reg a:hover{
+    opacity: 0.7;
+}
+.ContainLogAndReg .Log a{
+    color: var(--FColor);
+    background-color:var(--WColor);
+    border: solid 2px var(--FColor);
+}
+.ContainLogAndReg .Log a:hover{
+    opacity: 0.7;
+}
+/* End Navigation Bar */
+/* Start Extentions Navigation Bar */
+.ContainSearch{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 2px var(--EColor);
+    visibility:hidden;
+    backdrop-filter: blur(0px);
+    background: rgba(255, 255, 255, 0.8);
+}
+.SearchBox{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 360px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 0 15px 0 15px ;
+    border: solid 2px var(--PColor);
+}
+.InputAndActionSearching{
+    height: 100%;
+    width: 350px;
+    color: var(--PColor);
+}
+.InputAndActionSearching input{
+    height: 100%;
+    width: 90%;
+    font-size: 26px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background: none;
+    color:#006d5b;
+}
+.FilterSearching{
+    color: var(--PColor);
+}
+.ContainFilters{
+    position: fixed;
+    top: 60px;
+    z-index: 5;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 120px) ;
+    backdrop-filter: blur(50px);
+    background: rgba(255, 255, 255, 0.8);
+    visibility: hidden;
+}
+.ContainFilters .Filters{
+    width:100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    padding:80px 10px 10px 10px;
+}
+.ContainFilters .Filters .Filter{
+    width: 280px;
+    font-family: sans-serif;
+}
+.ContainFilters .Filters .Filter .TopicFitler{
+    position: relative;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.ContainFilters .Filters .Filter .TopicFitler::before{
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 40px;
+    top: 0;
+    right: -20px;
+    background-color: black;
+}
+.ContainFilters .Filters .Filter .InputsFilters{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px;
+    align-items: center;
+}
+.ContainFilters .Filters .Filter .InputsFilters input{
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.ShowContainSearch,
+.GSI{
+    visibility: visible !important;
+}
+.ContainSearch .CloseAll{
+    position: absolute;
+    right: -50px;
+    top: -8px;
+    color: var(--PColor);
+    opacity: 0.7;
+    font-size: 50px;
+}
+.ShowIt{
+    display: inherit  !important;
+    visibility: visible  !important;
+}
+.NavBar .false:nth-child(1),
+.NavBar .false:last-child{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+}
+.NavBar .false:nth-child(1) a,
+.NavBar .false:last-child a{
+    border: none;
+}
+.NavBar .false:nth-child(2){
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 120px);
+}
+.NavBar .false:nth-child(2) ul{
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+    padding: 50px 0 100px 0;
+}
+.NavBar .false:nth-child(2) ul li{
+    overflow: hidden;
+}
+.NavBar .false:nth-child(2) ul li a{
+    font-size: 30px;
+    font-weight: 700;
+    border: none;
+}
+.NavBar .false:nth-child(2) ul li a span{
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background-color: var(--WColor);
+    transition: 0.2s ease-in;
+}
+.NavBar .false:nth-child(2) ul li:hover a span{
+    left: 0;
+}
+.GoTopAllPages{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    background-color: var(--FColor);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    rotate: -90deg;
+    visibility: hidden;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+.GoTopAllPages a{
+    font-size: 35px;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    margin: 5px 0 0 0;
+}
+/* End Extentions Navigation Bar */
+/* ٍStart WebSite Contains */
+/* Start WellCome Screen */
+.ContainAllArticles{
+    position: relative;
+    width: 100%;
+    min-height: 700vh;
+    background-color: red;
+}
+.Other{
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--WColor);
+    padding-top: 60px;
+}
+.Other:last-child{
+    min-height: 365px;
+}
+.ContainAllArticles .Other:nth-child(odd){
+    background-color: var(--FColor);
+}
+.WellComeScreen{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: calc(100vh );
+    display: flex;
+    justify-content: center;
+}
+.WellComeScreen .ContainAllContactIntro{
+    z-index: 1;
+    position: absolute;
+    width: 120px;
+    height: 80px;
+    right: 260px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    transform: skewX(-45deg);
+    display: flex;
+    justify-content: flex-end;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+.WellComeScreen .ContainAllContactIntroShow{
+    width: 70%;
+    transition: 0.5s;
+}
+.WellComeScreen .ContainAllContactIntro .ContainerContactIntro{
+    opacity: 0;
+    margin-left: 25px;
+    transition:opacity 1s , margin-left 1s;
+}
+.WellComeScreen .ContainAllContactIntroShow .ContainerContactIntro{
+    opacity: 1;
+    margin-left: 0px;
+    transition-delay: 0.5s , 0.5s;
+}
+.WellComeScreen .ContainAllContactIntro .XMarkIntroContact:first-child{
+    position: absolute;
+    z-index: 1;
+    bottom: 6px;
+    right: 30px;
+    font-size: 60px;
+    transform: skewX(45deg) rotate(45deg);
+    color: #840707;
+    transition: 0.5s;
+}
+.WellComeScreen .ContainAllContactIntroShow .XMarkIntroContact:first-child{
+    transform:skewX(45deg) rotate(-90deg);
+}
+.WellComeScreen .ContainAllContactIntro .ContainerContactIntro{
+    width: 90%;
+    height: 100%;
+    transform: skewX(45deg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.WellComeScreen .ContainAllContactIntro .ContainerContactIntro a{
+    position: relative;
+    font-size: 40px;
+    text-decoration: none;
+    outline: none;
+    color: var(--ColorIconLink);
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.WellComeScreen .ContainAllContactIntro .ContainerContactIntro a:hover{
+    opacity: 1;
+}
+.WellComeScreen .ContainTextIntro{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    }
+.WellComeScreen .ContainTextIntro h1{
+    font-size: 100px;
+    color: var(--EColor);
+    margin-top: -80px;
+    margin-bottom: 70px;
+}
+.WellComeScreen .ContainTextIntro h4{
+    font-size: 28px;
+    width: 800px;
+    color: #840707;
+    text-align: center;
+    opacity: 0.8;
+    cursor: default;
+}
+.WellComeScreen .IntroImage{
+    width: 100%;
+    height: 100%;
+}
+.WellComeScreen .ContainYouTubeLink{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(0 100%, 100% 0%, 100% 100%, 0% 100%);
+    transition: 1s;
+}
+.WellComeScreen .RotContYTL{
+    width: 100%;
+    height: 100%;
+    transform: translate(50px,65px) rotate(-45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(252, 0, 0);
+}
+.WellComeScreen .RotContYTL a{
+    text-decoration: none;
+    outline: none;
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    color:#840707;
+}
+.WellComeScreen .RotContYTL i{
+    color:#840707;
+    font-size: 60px;
+}
+/* End WellCome Screen */
+/* Start Simply How We Are */
+.SimplyWhoWeAre,
+.ContainAllElseContact{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--WColor);
+    height: auto;
+    overflow: hidden;
+    padding: 60px 0;
+}
+.SimplyWhoWeAre .ContainSimpleAndJop{
+    width: 500px;
+    height: 500px;
+    cursor: default;
+}
+.SimplyWhoWeAre .ContainSimpleAndJop .Simple,
+.SimplyWhoWeAre .ContainJop .Jop{
+    font-size: 50px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.SimplyWhoWeAre .ContainSimpleAndJop ul{
+    margin-right: 60px;
+}
+.SimplyWhoWeAre .ContainSimpleAndJop ul li{
+    font-size: 26px;
+    color: #333;
+    font-weight: 800;
+}
+.SimplyWhoWeAre .ContainJop .ArticleJop,
+.SimplyWhoWeAre .ContainJop .Contact,
+.SimplyWhoWeAre .ContainJop .ContainBtnsContact,
+.ArticleJop{
+    margin-right: 40px;
+    font-size: 26px;
+}
+.SimplyWhoWeAre .ContainJop .ArticleJop,
+.ArticleJop{
+    color: #333;
+}
+.SimplyWhoWeAre .ContainJop .ContainBtnsContact{
+    width: 400px;
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
+    align-items: center;
+    font-size: 60px;
+    margin-top: 40px;
+    position: relative;
+}
+.SimplyWhoWeAre .ContainJop .ContainBtnsContact::before{
+    position: absolute;
+    content: "";
+    bottom: -30px;
+    left: -500px;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background:linear-gradient(to left , #0f87ee, #fd1954);
+    transition: 1s;
+}
+.SimplyWhoWeAre .ContainJop .ContainBtnsContactUnder::before{
+    left: 0;
+}
+.SimplyWhoWeAre .ContainJop .ContainBtnsContact a{
+    position: relative;
+    outline: none;
+    color: #0f87ee;
+    text-decoration: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.SimplyWhoWeAre .ContainJop .ContainBtnsContact a:last-child{
+    color: #fd1954;
+}
+.SimplyWhoWeAre .ContainJop .ContainBtnsContact  a:hover i:last-child,
+.ContainAllContactIntro .ContainerContactIntro a:hover i:last-child{
+    opacity: 0.5;
+    right: -80px;
+}
+.SimplyWhoWeAre .ContainJop .ContainBtnsContact a:hover{
+    opacity: 1;
+}
+.SimplyWhoWeAre .ContainJop .Contact{
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+.SimplyWhoWeAre .ContainLogo,
+.SimplyWhoWeAre .ContainLogo img,
+.ContainLogo,
+.ContainLogo img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+.ShowFooterAndContactWithUs{
+    z-index: 3 !important;
+}
+/* End Simply How We Are */
+/* Start Suggestion For You */
+.SuggestionForYou{
+    padding-top: 100px;
+    height: auto;
+    padding-bottom: 20px;
+}
+.QuistionSearched .RepeatedSearch,
+.SuggestionForYou h1:first-child,
+.ContainAllArticles h1,
+.OlwaysQuistionAsked .ContainQuistions h1:first-child,
+.ContainRegesterAndLogin .TopicLog,
+.ContainAllArticles .ContainAllUs .TopicLog,
+.ContainListForPartitions .TitleForAllPartitions,
+.SimplyWhoWeAre .HowWeAreTopic{
+    padding-right: 60px;
+    width: 100%;
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    position: relative;
+}
+.QuistionSearched .RepeatedSearch::before,
+.ContainListForPartitions .TitleForAllPartitions::before,
+.SuggestionForYou h1:first-child::before,
+.OurReferenceAndSuggest h1::before,
+.OlwaysQuistionAsked .ContainQuistions h1:first-child::before,
+.ContainRegesterAndLogin .TopicLog:before,
+.ContainAllArticles .ContainAllUs .TopicLog::before,
+.SimplyWhoWeAre .HowWeAreTopic::before{
+    position: absolute;
+    content: "";
+    background:linear-gradient(45deg , var(--FColor), var(--PColor));
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 10px;
+    margin: 60px;
+    border-radius: 5px;
+}
+.SuggestionForYou .ContainAllCardVedio{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+.SuggestionForYou .ContainAllCardVedio .CardVedio{
+    width: 350px;
+    height: 300px;
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    border: solid 1px var(--EColor);
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.5);
+}
+.SuggestionForYou .ContainAllCardVedio .CardVedio img{
+    width: 100%;
+    height: 250px;
+}
+.SuggestionForYou .ContainAllCardVedio .CardVedio h2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    cursor: default;
+    font-family: sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+}
+.SuggestionForYou .ContainAllCardVedio .CardVedio .ContainDetailsVedio,
+.SuggestionForYou .ContainAllCardVedio .CardVedio .ContainDetailsVedio2{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: var(--PColor); 
+    transition: 0.3s;  
+}
+.SuggestionForYou .ContainAllCardVedio .CardVedio:hover .ContainDetailsVedio{
+    opacity: 0.8;
+}
+.SuggestionForYou .ContainAllCardVedio .CardVedio .ContainDetailsVedio h3{
+    width: 100%;
+    height: 200px;
+    font-size: 22px;
+    padding: 10px;
+}
+.SuggestionForYou .ContainAllCardVedio .CardVedio .ContainDetailsVedio .DetailsShowAndLove,
+.SuggestionForYou .ContainAllCardVedio .CardVedio .ContainDetailsVedio2 .DetailsShowAndLove{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: default;
+}
+.SuggestionForYou .ContainAllCardVedio .CardVedio .ContainDetailsVedio .DetailsShowAndLove a,
+.SuggestionForYou .ContainAllCardVedio .CardVedio .ContainDetailsVedio2 .DetailsShowAndLove a{
+    font-size: 20px;
+    color: blue;
+}
+.SuggestionForYou .ContainAllCardVedio .CardVedio .ContainDetailsVedio2{
+    position: absolute;
+    top:calc(100% - 50px);
+    left: 0;
+    bottom: calc(-100% + 50px);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: 0.3s;
+    padding:0 10px;
+}
+.SuggestionForYou .ContainAllCardVedio .CardVedio:hover .ContainDetailsVedio2{
+    top: 0;
+    bottom: 100%;
+    opacity: 0.8;
+    cursor: default;
+    transition: 0.3s;
+} 
+.SuggestionForYou .ContainAllCardVedio .CardVedio .ContainDetailsVedio2 .Label{
+    width: 100%;
+    font-size: 26px;
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-right: 0px;
+    cursor: default;
+    height: 50px;
+}
+/* End Suggestion For You */
+/* Start Suggest Us And Our Reference */
+.OurReferenceAndSuggest::before,
+.OurReferenceAndSuggest::after,
+.SimplyWhoWeAre::after,
+.SimplyWhoWeAre::before{
+    position: absolute;
+    content: "";
+    width: 600px;
+    height: 600px;
+    z-index: -1;
+    border-radius: 50%;
+    border: 6px var(--EColor) solid;
+    background-color: var(--EColor);
+    opacity: 0;
+}
+.OurReferenceAndSuggestPock::before{
+    transition: 1s;
+    opacity: 0.6;
+    top: -10%;
+    right: -10%;
+}
+.OurReferenceAndSuggestPock::after{
+    transition: 1s;
+    opacity: 0.6;
+    bottom: -10%;
+    left: -10%;
+}
+.OurReferenceAndSuggest{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.OurReferenceAndSuggest .SuggestForUs{
+    width: 100%; 
+    min-height: 400px;
+    padding: 60px 30px 20px 0;
+}
+.OurReferenceAndSuggest .SuggestForUs form{
+    position:relative;
+}
+.OurReferenceAndSuggest .SuggestForUs .ControlWhere{
+    position: absolute;
+    top:calc(var(--HeightRight) - 40px);
+    right: -50px;
+    color: var(--PColor);
+    font-weight: 900;
+    font-size: 60px;
+    rotate: -90deg;
+    transition: color 0.5s;
+}
+.OurReferenceAndSuggest .SuggestForUs .ContainAddSuggest{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.OurReferenceAndSuggest .SuggestForUs .ContainAddSuggest form
+{
+    width: 70%;
+    border:solid var(--EColor) 2px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 6px 1px #000000A1;
+}
+.OurReferenceAndSuggest .SuggestForUs .ContainAddSuggest h2{
+    font-weight: 600;
+    margin: 10px 0;
+    font-family: sans-serif;
+    cursor:default;
+}
+.OurReferenceAndSuggest .SuggestForUs .ContainAddSuggest input,
+.OurReferenceAndSuggest .SuggestForUs .ContainAddSuggest textarea{
+    appearance: none;
+    outline: none;
+    text-decoration: none;
+    border: solid 3px var(--EColor);
+    box-shadow: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+.OurReferenceAndSuggest .SuggestForUs .ContainAddSuggest textarea{
+    min-width: 50%;
+    max-width: 100%;
+    min-height: 300px;
+    max-height: 500px;
+}
+.OurReferenceAndSuggest .SuggestForUs .ContainAddSuggest .ContainBtns{
+    display: flex;
+    align-items: center;
+    margin:10px 0 0 0;
+    gap: 10px;
+}
+.OurReferenceAndSuggest .SuggestForUs .ContainAddSuggest .ContainBtns button{
+    position: relative;
+    appearance: none;
+    border: solid 3px var(--EColor);
+    background: none;
+    color: var(--FColor);
+    outline: none;
+    width: 120px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.OurReferenceAndSuggest .SuggestForUs .ContainAddSuggest .ContainBtns button:first-child{
+    color:var(--WColor);
+    background: #ffbb00e3;
+}
+.OurReferenceAndSuggest .SuggestForUs .ContainAddSuggest .ContainBtns button:hover{
+    background-color: var(--FColor);
+    color: var(--WColor);
+}
+.OurReferenceAndSuggest .ContainRefrence{
+    width: 100%;
+    min-height: 300px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.OurReferenceAndSuggest .ContainRefrence h1{
+    margin: 60px 60px 20px 0;
+}
+.OurReferenceAndSuggest .ContainRefrence .References::-webkit-scrollbar{
+    height: 1px;
+    width: 1px;
+}
+.OurReferenceAndSuggest .ContainRefrence .References{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    border: solid var(--EColor) 3px;
+    border-radius: 10px;
+    background-color: var(--EColor);
+    opacity: 0.9;
+    padding: 10px;
+    overflow: scroll;
+}
+.OurReferenceAndSuggest .ContainRefrence .References img{
+    width: 200px;
+    height: 200px;
+}
+/* End Suggest Us And Our Reference */
+/* Start Olways Quistion Asked */
+.OlwaysQuistionAsked{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding: 20px 10px;
+    padding-right: 30px;
+}
+.OlwaysQuistionAsked .ContainQuistions{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    padding-top:60px ;
+}
+.OlwaysQuistionAsked .ContainQuistions .AllContainQuis{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+}
+.OlwaysQuistionAsked .ContainQuistions .Quistions{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    justify-content: center;
+    position: relative;
+}
+.OlwaysQuistionAsked .ContainQuistions .Quistions::before{
+    position: absolute;
+    content: "";
+    right: -30px;
+    top: 0;
+    width: 15px;
+    height: 0%;
+    border-radius: 15px;
+    background: var(--PColor);
+    transition: 2s;
+}
+.OlwaysQuistionAsked .ContainQuistions .QuistionsShow::before{
+    height: 100% !important;
+}
+.OlwaysQuistionAsked .ContainQuistions .Quistions a:last-child{
+    margin: 0;
+}
+.OlwaysQuistionAsked .ContainQuistions .Quistions a:hover{
+    text-decoration: underline;
+}
+.OlwaysQuistionAsked .ContainQuistions .Quistions a{
+    font-size: 30px;
+    font-weight: 600;
+    color: blue;
+    margin-bottom: 10px;
+    position: relative;
+    outline: none;
+    text-decoration: none;
+}
+.OlwaysQuistionAsked .ContainQuistions .Quistions a:before{
+    position: absolute;
+    content: "";
+    right: -20px;
+    top: 5px;
+    width: 5px;
+    height: 20px;
+    background-color: var(--EColor);
+}
+.OlwaysQuistionAsked .ContainQuistions .QuistionImage{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.OlwaysQuistionAsked .ContainQuistions .QuistionImage img{
+    width: 100%;
+}
+/* End Olways Quistion Asked */
+/* Start Footer */
+.FooterAndContactWithUs{
+    position: fixed;
+    z-index: 1; 
+    bottom: 0;
+    width: 100%;
+    padding-top: 60px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--FColor);
+}
+.FooterAndContactWithUs .ContainContactLogoLoginCard{
+    height: auto;
+    width: 1400px;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.FooterAndContactWithUs .ContainContactLogoLoginCard .FooterLogo{
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+}
+.FooterAndContactWithUs .ContainContactLogoLoginCard .FooterLogo img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.FooterAndContactWithUs .ContainContactLogoLoginCard .ContainContact .ContainerFooter{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.FooterAndContactWithUs .ContainContactLogoLoginCard .ContainContact .ContainerFooter::before{
+    position: absolute;
+    content: "";
+    top: -30px  ;
+    right: -700px;
+    width: 200%;
+    height: 240px;
+    background-color: var(--WColor);
+    transform: skewX(-20deg);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.FooterAndContactWithUs .ContainContactLogoLoginCard .ContainContact .ContainerBack::before{
+    right: -50%;
+}
+.FooterAndContactWithUs .ContainContactLogoLoginCard .ContainContact{
+    width: 155px;
+    height: 300px;
+    display: flex;
+    direction: ltr;
+    align-items: center;
+}
+.FooterAndContactWithUs .ContainContactLogoLoginCard .ContainContact a{
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--ColorIconLink);
+    text-decoration: none;
+    outline: none;
+    opacity: 0.7;
+}
+.FooterAndContactWithUs .ContainContactLogoLoginCard .ContainContact a i:last-child,
+.SimplyWhoWeAre .ContainJop .ContainBtnsContact  a i:last-child,
+.ContainAllContactIntro .ContainerContactIntro a i:last-child{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 10px;
+    top: 5px;
+    right: 0px;
+    transition: 0.2s;
+    opacity: 0;
+}
+.FooterAndContactWithUs .ContainContactLogoLoginCard .ContainContact a:hover i:last-child{
+    opacity: 0.5;
+    right: -15px;
+}
+.FooterAndContactWithUs .ContainContactLogoLoginCard .ContainContact a:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+.SimplyWhoWeAre .ContainJop .ContainBtnsContact  a i:last-child,
+.ContainAllContactIntro .ContainerContactIntro a:hover i:last-child{
+    right: -50px;
+}
+.FooterAndContactWithUs .DeveloperContact{
+    width: 100%;
+    height: 30px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: var(--WColor);
+    cursor: pointer;
+    background-color: rebeccapurple;
+}
+/* End Footer */
+/* End WebSite Contains */
+/* Start Medias */
+@media only screen and (max-width:1111px){
+    .ContainLogoAndMenuAndSearch{
+        width: 125px;
+    }
+}
+@media only screen and (max-width:970px){
+    .ContainLogoAndMenuAndSearch{
+        width: 40%;
+    }
+    .ContainLinks{
+        display: none;
+        background-color: var(--WColor);
+    }
+    .Menu{
+        display: inherit;
+    }
+    .NavBar .false:nth-child(2){
+        height: calc(100vh - 60px);
+        top: 60px;
+    }
+    .NavBar .false:nth-child(2) ul li a{
+        color: #2d7065;
+    }
+}
+@media only screen and (max-width:500px){
+    .ContainLogAndReg,#allall{
+        background-color: var(--WColor);
+        display: none;
+    }
+    .ContainLogoAndMenuAndSearch{
+        width: 100%;
+    }
+    .NavBar .false:nth-child(2){
+        height: calc(100vh - 120px);
+        top: 118px;
+    }
+}
+/* End Medias */
+/* Testing*/

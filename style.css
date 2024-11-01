@@ -1,0 +1,101 @@
+  /* global properties */
+*{
+  padding: 0;
+  margin: 0;
+}
+/* All scrools */
+::-webkit-scrollbar{
+  background-color:#333;
+  width: 15px;
+  height: 7px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: orange;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-corner{
+  background-color: orange;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track-piece{
+  background-color: #333;
+}
+.width-hit-com{
+  max-width: 18rem;
+  height: 350px;
+    width: 250px;
+}
+/*Loading*/
+.section-loader{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:rgba(255, 166, 0, 0.123);
+  flex-direction: column;
+  animation: changeColor 5s linear infinite;
+}
+.loading-text{
+  color:orange;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 1000;
+  letter-spacing: 10px;
+}
+.loader
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+}
+.dot
+{
+  position: relative;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background: orange;
+  margin: 20px 10px;
+  transform: scale(0.1);
+  border-radius: 50%;
+  animation: animateDot 2s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+  box-shadow:
+  0 0 10px orange,
+  0 0 20px orange,
+  0 0 30px orange,
+  0 0 40px orange,
+  0 0 50px orange,
+  0 0 60px orange,
+  0 0 70px orange,
+  0 0 80px orange,
+  0 0 90px orange,
+  0 0 100px orange;
+}
+.section-loader .loader:last-child .dot
+{
+  animation-delay: calc(-0.1s * var(--i));
+}
+@keyframes changeColor
+{
+  0%
+  {filter: hue-rotate(0deg); }
+  100%
+  {filter: hue-rotate(360deg); }
+}
+@keyframes animateDot
+{
+  0%
+  {transform: scale(0.1); }
+  10%
+  {transform: scale(1);}
+  50%,100%
+  {transform: scale(0.1);}
+}
+/*body*/
+body
+{
+  background-color:#333; 
+}

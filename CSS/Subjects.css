@@ -1,0 +1,253 @@
+:root{
+    --PColor:#45B09E;
+    --FColor:#FFB900;
+    --WColor:#FAFAFA;
+    --EColor:#E0E0E0;
+}
+.SuggestionForYou .ContainAllCardVedio .CardVedio h2{
+    background-color:var(--PColor) ;
+}
+.Other{
+    padding-bottom: 60px;
+}
+.ContainAllCardVedio3 .Card2Vedio{
+    width: 350px;
+    height: 300px;
+    position: relative;
+    border: solid 1px var(--EColor);
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.5);
+}
+.ContainAllCardVedio .Card2Vedio img{
+    width: 100%;
+    height: 250px;
+    margin-top: 50px;
+}
+.SuggestionForYou .ContainAllCardVedio .Card2Vedio:hover .DetailsShowAndLove,
+.SuggestionForYou .ContainAllCardVedio .Card2Vedio:hover .VideoDetails{
+    right: 0;
+    transition: 0.3s;
+    transition-delay: var(--Delay);
+}
+.SuggestionForYou .ContainAllCardVedio .Card2Vedio:hover .DetailsShowAndLove a{
+    color: blue;
+}
+.SuggestionForYou .ContainAllCardVedio .Card2Vedio .TopicVideo,
+.SuggestionForYou .ContainAllCardVedio .Card2Vedio .VideoDetails{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    cursor: default;
+    font-family: sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    background-color: var(--PColor);
+    transition: 0.3s;
+    transition-delay: var(--Delay);
+}
+.SuggestionForYou .ContainAllCardVedio .Card2Vedio .VideoDetails{
+    top: 50px;  
+    right: -100%;
+    font-size: 22px;
+    padding: 10px;
+    width: 100%;
+    height: 200px;
+    align-items: normal;
+    opacity: 0.7;
+}
+.SuggestionForYou .ContainAllCardVedio .Card2Vedio .DetailsShowAndLove{
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    height: 50px;
+    background-color: var(--PColor);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: default;
+    transition: 0.3s;
+    transition-delay: var(--Delay);
+    opacity: 0.7;
+}
+/* List */
+.ContainListForPartitions .AllListPartitions{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.ContainListForPartitions .AllListPartitions .ListPartition{
+    width: 700px;
+    height: 325px;
+    margin: 10px;
+    border: solid 1px var(--EColor);
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+}
+.ContainListForPartitions .AllListPartitions .ListPartition .ContainImageListAndLength{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    border-left: solid 1px var(--EColor);
+}
+.ContainListForPartitions .AllListPartitions .ListPartition .ContainImageListAndLength img{
+    width: 100%;
+    height: 80%;
+}
+.ContainListForPartitions .AllListPartitions .ListPartition .ContainImageListAndLength div{
+    position: absolute;
+    z-index: 1  ;
+    bottom:  0;
+    left: 0;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 44px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.ContainListForPartitions .AllListPartitions .ListPartition .ContainImageListAndLength div p,
+.ContainListForPartitions .AllListPartitions .ListPartition .ContainImageListAndLength div i{
+    margin-left: 10px;
+    cursor: default;
+}
+.ContainListForPartitions .AllListPartitions .ListPartition .ContainTopicAndShow{
+    width: 50%;
+    height: 100%;
+    background-color: var(--PColor);
+    display:flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.ContainListForPartitions .AllListPartitions .ListPartition .ContainTopicAndShow .ContainTopicAndDetails{
+    font-family: sans-serif;
+    cursor: default;
+}
+.ContainListForPartitions .AllListPartitions .ListPartition .ContainTopicAndShow .ContainTopicAndDetails .TopicList{
+    margin-bottom: 12px;
+}
+.ContainListForPartitions .AllListPartitions .ListPartition .ContainTopicAndShow .ContainTopicAndDetails .DescriptionList{
+    font-size: 22px;
+    padding-right: 10px;
+    opacity: 0.7;
+}
+.ContainListForPartitions .AllListPartitions .ListPartition .ContainTopicAndShow .ContainTopicAndDetails .PartList{
+    margin: 15px 10px 0 0;
+    font-size: 16px;
+    color: black;
+    opacity: 0.8;
+}
+.ContainListForPartitions .AllListPartitions .ListPartition .ContainTopicAndShow .ContainShowAndShare{
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+.ContainListForPartitions .AllListPartitions .ListPartition .ContainTopicAndShow .ContainShowAndShare a{
+    width: 50px;
+    padding: 7px;
+    background-color: var(--FColor);
+    margin: 5px;
+    border: solid 1px var(--EColor);
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: var(--WColor);
+    transition: 0.2s;
+}
+.ContainListForPartitions .AllListPartitions .ListPartition .ContainTopicAndShow .ContainShowAndShare a:hover{
+    color: var(--FColor);
+    background-color: var(--WColor);
+    transition: 0.2s;
+}
+.ContainAllArticles .QuistionSearched {
+    height: auto;
+    min-height: auto;
+}
+.ContainAllArticles .QuistionSearched .ContainQuitionAll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.ContainAllArticles .QuistionSearched .ContainQuitionAll a{
+    padding: 7px 17px;
+    border-radius: 25px;
+    border: solid 1px var(--EColor);
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.5);
+    background-color: #45B09E;
+    text-decoration: none;
+    outline: none;
+    font-size: 28px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: blue;
+    margin: 10px;
+}
+/* others */
+.OurReferenceAndSuggest{
+    padding-bottom: 20px;
+}
+.SimplyWhoWeAre{
+    justify-content: space-around;
+    padding-top: 20px;
+}
+.ContainAllArticles .SimplyWhoWeAre .ContainSimpleAndJop{
+    width: 500px;
+}
+.SimplyContainerWho{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--WColor);
+    height: auto;
+    overflow: hidden;
+    padding: 60px 0;
+}
+.SimplyWhoWeAre .HowWeAreTopic{
+    margin-right: 30px;
+}
+.SimplyWhoWeAre .HowWeAreTopic::before{
+    width: 150px;
+}
+.SimplyContainerWho{
+    padding-top: 20px;
+    background-color: transparent;
+}
+.OurReferenceAndSuggest::before,
+.OurReferenceAndSuggest::after,
+.SimplyWhoWeAre::after,
+.SimplyWhoWeAre::before{
+    opacity: 1;
+    top: -10%;
+    display: block;
+    right: -10%;
+}
+.OurReferenceAndSuggest::before,
+.SimplyWhoWeAre::before{
+    left: -10%;
+    bottom: -10%;
+    top: auto;
+    right: auto;
+}
